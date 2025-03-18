@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import { configDotenv } from "dotenv";
 import { connectMongoDb } from "./data-base/mongo-db";
 import categoryRoute from "./routes/food-category.route";
+import dishRoute from "./routes/dishes.route";
 import cors from "cors";
 
 configDotenv();
@@ -15,6 +16,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/addCategory", categoryRoute);
+
+app.use("/details", dishRoute);
 
 app.get("/");
 
