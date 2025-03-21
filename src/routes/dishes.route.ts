@@ -4,9 +4,9 @@ import {
   getDishDetails,
 } from "../controllers/dish.controller";
 
-const route1 = express.Router();
+const route = express.Router();
 
-route1.post("/", createDishDetails);
-route1.get("/", getDishDetails);
+route.post("/", createDishDetails);
+route.get("/", getDishDetails);
 
-export default route1;
+export default route;
