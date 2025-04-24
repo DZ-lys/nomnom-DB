@@ -16,7 +16,7 @@ const DishDetailsSchema: Schema = new Schema(
     ingredients: { type: String, required: true },
     category: {
       type: Schema.Types.ObjectId,
-      ref: "FoodCategory",
+      ref: "foodcategories",
       required: true,
     },
   },
@@ -24,6 +24,6 @@ const DishDetailsSchema: Schema = new Schema(
 );
 
 export default mongoose.model<DishDetailsSchemaType>(
-  "DishDetails",
+  "foods",
   DishDetailsSchema
 );

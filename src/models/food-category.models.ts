@@ -12,6 +12,6 @@ const FoodCategorySchema: Schema = new Schema(
 );
 
 export default mongoose.model<FoodCategorySchemaType>(
-  "FoodCategory",
+  "foodcategories",
   FoodCategorySchema
 );
